@@ -73,5 +73,23 @@ class MathTL():
                   num2[j],num2[j+1] = num2[j+1],num2[j]
 
       return num2 
+    def Selection_sort(data:list):#you need 2 lists one is the
+    
+      sorted_list=[]
+      unsorted_list = data.copy() #sorted list 2nd is the unsorted list
+      string=data[0]
+      for i in range(0,len(unsorted_list)):
+        try:#try is better than if in this case line by lin
+          string=float(string) 
+          smallest=99999999999999
+        except:
+            smallest='z'
+        
+        for j in range(0,len(unsorted_list)):
+         if unsorted_list[j]<smallest:
+            smallest=unsorted_list[j]
+        sorted_list.append(smallest)
+        unsorted_list.pop(unsorted_list.index(smallest))
+      return(sorted_list)  
 
 
